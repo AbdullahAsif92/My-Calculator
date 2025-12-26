@@ -3,6 +3,9 @@ const numberButtons = document.querySelectorAll('.basic-button');
 const opreationsButtons = document.querySelectorAll('.opreation-row-button');
 const equalButton = document.querySelector('.perfom-button');
 const clearButton = document.querySelector('.clear-button');
+const darkModeButton = document.querySelector('.dark-mode-button');
+const lightModeBUtton = document.querySelector('.light-mode-button');
+const body = document.querySelector('body');
 
 let currentValue = "";
 let previousValue = "";
@@ -51,4 +54,12 @@ clearButton.addEventListener("click", () => {
     previousValue = "";
     operator = null;
     input.value = "";
+});
+
+darkModeButton.addEventListener("click", () => {
+    body.classList.add('dark-mode');
+});
+
+lightModeBUtton.addEventListener("click", () => {
+    body.classList.remove('dark-mode');
 });
